@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>US Elections 2020</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-1 col-xs-1"></div>
+        <div class="col-md-10 col-xs-10">
+          <h2>2020 Presidential General Election Results by County</h2>
+          <h4>Click on the map to explore</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <svg ></svg>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-xs-1"></div>
+        <div class="col-md-10 col-xs-10">
+          <p>
+            By 4 Muskateers
+          </p>
+        </div> <!-- col-md-10 -->
+        <div class="col-md-1">
+        </div>
+    </div> <!-- .row -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!--<script src="{{ url_for('static', filename='js/config.js') }}"></script>    -->
+    <!--<script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+    <!-- Our JS -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <script type="text/javascript" src="static/js/app.js"></script>    
+    <div class="tooltip" style="position: absolute; z-index: 10; visibility: hidden;"></div>    
+</body>
+
+</html>

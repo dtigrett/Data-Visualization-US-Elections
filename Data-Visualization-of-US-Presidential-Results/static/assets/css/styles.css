@@ -1,0 +1,109 @@
+
+
+/* Summary Box */
+#description-image {
+  width= 250px;
+  height:200px;
+  float: left;
+  margin-right: 15px;
+}
+.description-content {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px 30px 40px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* From id on comparison page - header*/
+#description-header {
+    color:teal;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding-top: 15px; 
+    padding-left: 4px;
+}
+
+
+/* Summary and Vizualization Headers*/
+.description-header, .imageNav-header {
+	color:teal;
+	font-size: 35px;
+	font-weight: bold;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding-top: 15px; 
+	padding-left: 4px;
+}
+
+h3 {
+  color:darkslategrey;
+  font-size: 18px;
+  text-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+}
+
+/* Vizualization boxes*/
+#imageNav-area {
+  margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px 30px 40px;
+  background-color: white;
+  display: inline-block;
+  object-fit: contain;
+}
+#images{
+  object-fit: contain;
+  display: inline-block;
+  flex-wrap: wrap
+}
+
+.imageNav-photo {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+   max-height: 100%;
+   max-width: 100%;    
+   display: inline-block;
+   margin: auto auto;
+}
+
+
+/* Navbar */
+
+#bs-example-navbar-collapse-1 {
+  max-height: 55px; 
+  background-color: white; 
+  font-size: 25px;
+}
+#logo {
+  color: white;
+  background-color: teal;
+  margin-left: 20px;
+}
+.dropdown {
+  font-size: 25px;
+  color: black;
+}
+.navbar {
+  color: black;
+}
+
+.navigation .navbar-brand{
+	color: white; 
+	margin-left: 50px; 
+	padding: inherit; 
+	font-weight: bold; 
+	background-color:teal;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+
+
+/* Final Tweaks*/
+body{
+  background-image: url(https://p4.wallpaperbetter.com/wallpaper/324/605/138/no-man-s-sky-no-man-s-sky-next-video-games-space-wallpaper-5826bdf8f0c02cc8107c31be8882a45a.jpg)
+}

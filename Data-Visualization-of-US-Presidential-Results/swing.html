@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swing Analysis</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style></style>    
+</head>
+<body class="body1">
+
+<!-- Our rows function in containers (grid created). -->
+<!--<div class="container">-->
+<!--BEGIN DIV CLASSES-->
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!--BEGIN ACTIVE NAVIGATION-->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"> 
+                <span class="nav-color navbaractive">USA Presidential Results</span></a>
+            </div>
+            <!--END ACTIVE NAVIGATION-->
+
+
+            <div class="nav navbar-nav navbar-right">
+                <!--BEGIN DROP DOWN NAV-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="election_results.html">Election results</a></li>
+                        <li><a href="demographics.html">Voter Turnout and Demographics</a></li>
+                        <li><a href="swing.html">Swing Analysis</a></li>
+                        <li><a href="voter_turnouts.html">Voter Turnout and Party Analysis</a></li>
+                    </ul>
+                </li>
+                <!--END DROP DOWN NAV-->
+            </div>
+
+        </div>      
+    </nav>
+    <!--DIVIDER ROWS-->
+ 
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <h1 class="ml14">
+              <span class="text-wrapper">
+                <span class="letters">Swing Analysis</span>
+                <span class="line"></span>
+              </span>
+            </h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            <script>// Wrap every letter in a span
+              var textWrapper = document.querySelector('.ml14 .letters');
+              textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+              
+              anime.timeline({loop: true})
+                .add({
+                  targets: '.ml14 .line',
+                  scaleX: [0,1],
+                  opacity: [0.5,1],
+                  easing: "easeInOutExpo",
+                  duration: 900
+                }).add({
+                  targets: '.ml14 .letter',
+                  opacity: [0,1],
+                  translateX: [40,0],
+                  translateZ: 0,
+                  scaleX: [0.3, 1],
+                  easing: "easeOutExpo",
+                  duration: 800,
+                  offset: '-=600',
+                  delay: (el, i) => 150 + 25 * i
+                }).add({
+                  targets: '.ml14',
+                  opacity: 0,
+                  duration: 1000,
+                  easing: "easeOutExpo",
+                  delay: 1000
+                });</script>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12  col-md-9">
+            <div id="result1">
+                <img id="result-img1" src="/Images/Battleground.png" alt="Battleground State Voter Turnout change from 2016 to 2020">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12  col-md-9">
+              <div id="result2">
+                  <img id="result-img2" src="/Images/DemGOP2016.png" alt="Democrats vs Republican Voters 2016">
+              </div>
+            </div>
+          </div>
+       <div class="row">
+            <div class="col-xs-12  col-md-9">
+                <div id="result3">
+                <img id="result-img3" src="/Images/DemGOP2020.png" alt="Democrats vs Republican Voters 2020">
+            </div>
+        </div>
+       </div>
+  </div>    
+      <!-- Footer-->
+      <div id="footer">
+        <p>The 4 Muskateers&copy;2021</p>
+      </div>
+
+<!--END DIV CLASSES-->
+
+</body>
+ 
+</html>

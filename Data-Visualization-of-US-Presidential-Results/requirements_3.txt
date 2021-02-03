@@ -1,0 +1,104 @@
+argon2-cffi @ file:///D:/bld/argon2-cffi_1596629999983/work
+async-generator==1.10
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1599308529326/work
+backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393461/work
+backports.functools-lru-cache==1.6.1
+beautifulsoup4==4.9.3
+bleach @ file:///home/conda/feedstock_root/build_artifacts/bleach_1600454382015/work
+bs4==0.0.1
+census==0.8.15
+certifi==2020.6.20
+cffi @ file:///D:/bld/cffi_1600276671793/work
+chardet==3.0.4
+citipy==0.0.5
+click==7.1.2
+colorama==0.4.3
+configparser==5.0.1
+crayons==0.4.0
+cx-Oracle==8.1.0
+cycler==0.10.0
+DateTime==4.3
+decorator==4.4.2
+defusedxml==0.6.0
+entrypoints==0.3
+Flask==1.1.2
+Flask-PyMongo==2.3.0
+Flask-SQLAlchemy==2.4.4
+future==0.18.2
+geojson==2.5.0
+gmaps==0.9.0
+idna==2.10
+importlib-metadata @ file:///D:/bld/importlib-metadata_1600910720176/work
+ipykernel @ file:///D:/bld/ipykernel_1595447100255/work/dist/ipykernel-5.3.4-py3-none-any.whl
+ipython==7.12.0
+ipython-genutils==0.2.0
+ipywidgets @ file:///home/conda/feedstock_root/build_artifacts/ipywidgets_1599554010055/work
+itsdangerous==1.1.0
+jedi==0.15.2
+jellyfish==0.6.1
+Jinja2==2.11.2
+jsonschema==3.2.0
+jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1598486169312/work
+jupyter-core==4.6.3
+jupyterlab-pygments==0.1.1
+kdtree==0.16
+kiwisolver==1.2.0
+lxml==4.6.1
+MarkupSafe @ file:///D:/bld/markupsafe_1600368473201/work
+matplotlib @ file:///C:/ci/matplotlib-base_1592846129657/work
+mistune==0.8.4
+mkl-fft==1.1.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+nbclient @ file:///home/conda/feedstock_root/build_artifacts/nbclient_1598558657104/work
+nbconvert @ file:///D:/bld/nbconvert_1600869838028/work
+nbformat @ file:///home/conda/feedstock_root/build_artifacts/nbformat_1594060262917/work
+nest-asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1600716022894/work
+notebook @ file:///D:/bld/notebook_1599742459479/work
+numpy==1.18.5
+OpenBlender==2.3
+openweathermapy==0.6.6
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1589925210001/work
+pandas @ file:///C:/ci/pandas_1592833608684/work
+pandocfilters==1.4.2
+parso==0.5.2
+pickleshare==0.7.5
+Pillow==7.2.0
+prometheus-client @ file:///home/conda/feedstock_root/build_artifacts/prometheus_client_1590412252446/work
+prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1598885455507/work
+psycopg2==2.8.6
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1600347314331/work
+pymongo==3.9.0
+pyparsing==2.4.7
+pyrsistent @ file:///D:/bld/pyrsistent_1599988419465/work
+python-dateutil==2.8.1
+python-dotenv==0.14.0
+pytz==2020.1
+pywin32==227
+pywinpty==0.5.7
+pyzmq==19.0.2
+requests==2.24.0
+scipy @ file:///C:/ci/scipy_1592930618155/work
+selenium==3.141.0
+Send2Trash==1.5.0
+six==1.15.0
+soupsieve==2.0.1
+splinter==0.14.0
+SQLAlchemy==1.3.17
+terminado @ file:///D:/bld/terminado_1600709870796/work
+testpath==0.4.4
+tornado==6.0.4
+traitlets==4.3.3
+urllib3==1.25.10
+us==2.0.2
+wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1600965781394/work
+webdriver-manager==3.2.2
+webencodings==0.5.1
+Werkzeug==1.0.1
+widgetsnbextension @ file:///D:/bld/widgetsnbextension_1594164575581/work
+wincertstore==0.2
+wordcloud==1.8.0
+yelpapi==2.4.0
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1600892581779/work
+zope.interface==5.1.0

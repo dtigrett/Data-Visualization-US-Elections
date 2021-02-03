@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Voter turnout with respect to Demographics</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>  
+
+  <link rel="stylesheet" href={{ url_for('static', filename = '/assets/css/style.css') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename = '/assets/css/d3Style.css') }}>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+        <!--BEGIN ACTIVE NAVIGATION-->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"> 
+            <span class="nav-color navbaractive">USA Presidential Results</span></a>
+        </div>
+        <!--END ACTIVE NAVIGATION-->
+
+        
+        <div class="nav navbar-nav navbar-right">
+            <!--BEGIN DROP DOWN NAV-->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/election_results">Election results</a></li>
+                    <li><a href="/demographics">Voter Turnout and Demographics</a></li>
+                    <li><a href="/swing">Swing Analysis</a></li>
+                    <li><a href="/voter_turnouts">Voter Turnout and Party Analysis</a></li>
+                </ul>
+            </li>
+            <!--END DROP DOWN NAV-->
+        </div>
+
+    </div>      
+</nav>
+<!--DIVIDER ROWS-->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <h1 class="ml14">
+          <span class="text-wrapper">
+            <span class="letters">Voter turnout with respect to Demographics</span>
+            <span class="line"></span>
+          </span>
+        </h1>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script>// Wrap every letter in a span
+          var textWrapper = document.querySelector('.ml14 .letters');
+          textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+          
+          anime.timeline({loop: true})
+            .add({
+              targets: '.ml14 .line',
+              scaleX: [0,1],
+              opacity: [0.5,1],
+              easing: "easeInOutExpo",
+              duration: 900
+            }).add({
+              targets: '.ml14 .letter',
+              opacity: [0,1],
+              translateX: [40,0],
+              translateZ: 0,
+              scaleX: [0.3, 1],
+              easing: "easeOutExpo",
+              duration: 800,
+              offset: '-=600',
+              delay: (el, i) => 150 + 25 * i
+            }).add({
+              targets: '.ml14',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });</script>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12  col-md-9">
+        <div id="scatter">
+          <!-- We append our chart here. -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12  col-md-9">
+        <div class="article">
+          <h2>Correlations Discovered Between Voter turnout and Age, Income</h2>
+          <h3>Correlations Discovered Between Voter turnout and Income</h3>
+          <p>•	The charts above display negative correlations between Voter Turnout 2016 and Voter Turnout 2020 in relation to poverty and household income. 
+            The visible trend indicates that less affluent and poorer states have -0.44 r-value correlation for 2016 and -0.55 r-value correlation for 2020. Hence,
+            Poorer states always had higher rates of Voter Turnouts. There is positive correlation of 0.39 r-value between Voter Turnout 2020 and household income.
+            There is positive correlation of 0.15 r-value between Voter Turnout 2016 and household income.</p>
+          <br>
+          <h3>Correlations Discovered Between Voter turnout and Age</h3>
+          <p>•	The correlations between Voter Turnout and age are are weekly positively related. The median ages in most US states are between 
+            36-40 years old.  There is positive correlation of 0.32 r-value between Voter Turnout 2020 and median age.
+            There is positive correlation of 0.40 r-value between Voter Turnout 2016 and median age.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer-->
+  <div id="footer">
+    <p>The 4 Muskateers&copy;2021</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script type="text/javascript" src="static/assets/js/app.js"></script>
+  <!--<script type="text/javascript" src= {{ url_for('static', filename = '/assets/js/app.js') }}></script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+body {
+  font-family: 'Lora';
+}
+
+.nation,
+.state,
+.county {
+  fill: none;
+  stroke: #000000;
+  pointer-events:none;
+}
+
+.nation {
+  stroke-width: 0.6px;
+}
+
+.state {
+  stroke-width: 0.5px;
+}
+
+.county {
+  stroke: #aaa;
+  stroke-width: 0.2px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.background {
+  fill: #f5f5f5;
+  fill-opacity: 0.7;
+}
+
+.bar text {
+  font-size: 10px;
+}
+
+.bar rect {
+  stroke: #000000;
+  stroke-width: 0.5px;
+}
+
+#county-legend {
+  text-anchor: middle;
+}
+
+#details {
+  z-index: 999;
+}
+
+#details .title {
+  font-size: 1.25vmin;
+}
+
+.legendCells {
+  cursor: pointer;
+}
+
+/* custom tooltip */
+.tooltip {
+  top: 100px;
+  left: 100px;
+  /* -moz-border-radius: 5px;
+  border-radius: 5px; */
+  /*border: 2px solid #000;*/
+  box-shadow: -4px 0 12px 0 rgba(0,0,0,.05);
+  background: #ffffff;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  opacity: 1;
+  /* color: white; */
+  padding: 10px;
+  /* min-width: 375px; */
+  min-width: 36.75vmin;
+  font-family: 'Lora';
+  font-size: 1.25vmin;
+  line-height: 18pt;
+  font-weight: lighter;
+  visibility: visible;
+}
+
+.tooltip.right::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: .9;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  /* border-left: 8px solid #333; */
+  right: -8px;
+  top: 35px;
+  /* arbitrarily set */
+}
+
+.tooltip.left::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: .9;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  left: -8px;
+  /* border-right: 8px solid #333; */
+  top: 35px;
+  /* arbitrarily set */
+}
+
+/* tooltip table */
+table {
+  /* table-layout: fixed; */
+  width: 100%;
+  max-width: 380px;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+tr:not(:nth-child(1)) {
+  border-top: 0.5px solid #ccc;
+  border-collapse: collapse;
+}
+
+td:not(:nth-child(1)) {
+  padding-left: 3px;
+}
+
+td:nth-child(1) {
+  width: 1%;
+}
+
+/* reset button */
+/* taken from http://materialdesignblog.com/creating-a-simple-material-design-action-button-with-css/ */
+/* uses Material Design principles, which is a plus */
+.fab {
+  width: 70px;
+  height: 70px;
+  background-color: #90A4AE;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 #666;
+  transition: all 0.1s ease-in-out;
+
+  font-size: 50px;
+  color: #000000;
+  text-align: center;
+  line-height: 70px;
+
+  position: fixed;
+  right: 225px;
+  bottom: 100px;
+
+  cursor: pointer;
+}
+
+.fab:hover {
+  box-shadow: 0 6px 14px 0 #666;
+  transform: scale(1.05);
+}
+
+/* scaling SVG */
+/* .scaling-svg-container {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0
+}
+
+.scaling-svg {
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0
+} */
+
+/*!
+ * Bootswatch v4.0.0
+ * Homepage: https://bootswatch.com
+ * Copyright 2012-2018 Thomas Park
+ * Licensed under MIT
+ * Based on Bootstrap
+*//*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*/
+  .tract {
+    stroke: #777;
+    stroke-width: 0.05px;
+    pointer-events: all;
+  }
+  .tract:hover {
+    stroke: orange;
+    pointer-events: all;
+  }
+  .tract-border {
+    fill: none;
+    /*stroke: #777;*/
+    stroke-width: 0.05px;
+    pointer-events: none;
+  }
+  @media (max-width: 767px) {
+    .label {
+      transform: rotate(-45deg) translate(-10px, 25px);
+    }
+  }
+  .tract-border-state {
+    fill: none;
+    stroke: #333;
+    stroke-width: 0.5px;
+    pointer-events: none;
+  }
+  .legend {
+    font-family: sans-serif;
+    font-size: 10pt;
+  }
+  .legendTitle {
+    font-weight: bold;
+    font-size:11pt;
+  }
+  .background {
+    fill:#f5f5f5;
+  }
+  body {
+    background: #f5f5f5;
+    /*font-family: sans-serif;*/
+  }
+  .bar {
+    font-family: sans-serif;
+    font-size: 8pt;
+  }
+  #cityLegend {
+    font-family: sans-serif;
+    text-anchor: middle;
+  }
+  #details .background {
+    fill: #f5f5f5;
+    fill-opacity: 0.7;
+  }
+  svg {
+    width:100%;
+  }

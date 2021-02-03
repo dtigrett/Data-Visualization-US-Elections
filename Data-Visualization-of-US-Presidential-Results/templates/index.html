@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/styles.css"/>
+ 
+    <title>USA Presidential Results from 2016 and 2020</title>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body class="body1">
+
+<!-- Our rows function in containers (grid created). -->
+<!--<div class="container">-->
+<!--BEGIN DIV CLASSES-->
+
+<body>
+        <nav class="navbar navbar-default">
+                <div class="container">
+                    <!--BEGIN ACTIVE NAVIGATION-->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/"> 
+                        <span class="nav-color navbaractive">USA Presidential Results</span></a>
+                    </div>
+                    <!--END ACTIVE NAVIGATION-->
+        
+                    
+                    <div class="nav navbar-nav navbar-right">
+                        <!--BEGIN DROP DOWN NAV-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/election_results">Election results</a></li>
+                                <li><a href="/demographics">Voter Turnout and Demographics</a></li>
+                                <li><a href="/swing">Swing Analysis</a></li>
+                                <li><a href="/voter_turnouts">Voter Turnout and Party Analysis</a></li>
+                            </ul>
+                        </li>
+                        <!--END DROP DOWN NAV-->
+                    </div>
+        
+                </div>      
+            </nav>
+            <!--DIVIDER ROWS-->
+
+        <div class= "container">
+            <div class= "row">
+                <div class= "col-md-6">
+                    <div class="main-box whiteback">
+                        <h1 class="ml1">
+                            <span class="text-wrapper">
+                              <span class="line line1"></span>
+                              <span class="letters">Summary: USA Elections</span>
+                              <span class="line line2"></span>
+                            </span>
+                          </h1>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                          <script>// Wrap every letter in a span
+                            var textWrapper = document.querySelector('.ml1 .letters');
+                            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+                            
+                            anime.timeline({loop: true})
+                              .add({
+                                targets: '.ml1 .letter',
+                                scale: [0.3,1],
+                                opacity: [0,1],
+                                translateZ: 0,
+                                easing: "easeOutExpo",
+                                duration: 600,
+                                delay: (el, i) => 70 * (i+1)
+                              }).add({
+                                targets: '.ml1 .line',
+                                scaleX: [0,1],
+                                opacity: [0.5,1],
+                                easing: "easeOutExpo",
+                                duration: 700,
+                                offset: '-=875',
+                                delay: (el, i, l) => 80 * (l - i)
+                              }).add({
+                                targets: '.ml1',
+                                opacity: 0,
+                                duration: 1000,
+                                easing: "easeOutExpo",
+                                delay: 1000
+                              });</script>
+                    <hr>
+                    <div id="summarytext">
+                        <img id= "landingimage" src= {{ url_for('static', filename = '/images/election2020.png') }} alt= "Election results">
+
+                        <!--src= "static/images/election2020.png" -->
+                        <p>
+                            The purpose of this project was to Analysis of US Presidential Results of 2016 and 2020 to find trends in voting patterns and identify possible reasons for those trends.
+                            <br><br>
+                            After Web Scraping the dataset, we used HTML, SVG, D3, Chloropeth JS library and Anime JS library to plot various aspects of the USA Election results. 
+                            Factors we looked at included: Voter Turnout, Household Income, Median Age, and Poverty.
+                            This site provides the visualizations created as part of the analysis, 
+                            as well as explanations and descriptions of any trends and correlations observed.
+                        </p><p><a class="btn btn-danger btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+                    </div>
+                    </div>
+                </div>
+                <div class= "col-md-6">
+                    <div class= "side-box">
+                    <h2 class= "main-pg-subheader">Visualizations</h2>
+                    <hr>
+                    <div class="sidebar">
+                        <a href="/election_results"><img id="side-img1" src= {{ url_for('static', filename = '/images/election2020.png') }} alt="Election results"></a>
+                        <a href="/demographics"><img id="side-img2" src= {{ url_for('static', filename = '/images/demographics.png') }} alt="Voter Turnout and Demographics"></a>
+                        <a href="/swing"><img id="side-img3" src= {{ url_for('static', filename = '/images/Battleground.png') }} alt="Swing Analysis"></a>
+                        <a href="/voter_turnouts"><img id="side-img4" src= {{ url_for('static', filename = '/images/OverallVoterTurnout.png') }} alt="Voter Turnout and Party Analysis"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--END DIV CLASSES-->
+
+</body>
+ 
+</html>

@@ -1,0 +1,3 @@
+# Yelp API Key
+yelp_client_id = "5AykeSTc_WsQao1ge5PMQg"
+yelp_key = "V5M8Oy8f8BAmG0WZ_FCt9opqcZSPhC5eossY8Onr2KSZuOwEDkWtGlSO3Ghda9BiJU4gT6d58vVzbzxMMJvmYDz4Z4aUrhIoC2ArI-DA94XXA9Qt2yUw1Ulv72qrX3Yx"
